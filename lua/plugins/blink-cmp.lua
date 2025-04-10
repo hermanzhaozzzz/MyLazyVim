@@ -9,7 +9,6 @@ local has_words_before = function(...) -- 允许接收任意参数
   local line = vim.api.nvim_get_current_line()
   return line:sub(col, col):match("%s") == nil
 end
-
 return {
   {
     "saghen/blink.cmp",
@@ -27,7 +26,8 @@ return {
           end,
           "fallback",
         },
-        -- 其他键位配置保持不变
+        -- Navigate to the previous suggestion or cancel completion if currently on the first one.
+        ["<S-Tab>"] = { "insert_prev" },
       },
       completion = {
         menu = { enabled = true },
