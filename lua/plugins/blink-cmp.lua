@@ -16,7 +16,7 @@ return {
     },
     opts = {
       keymap = {
-        preset = "none",
+        preset = "enter",
         ["<Tab>"] = {
           function(cmp)
             if has_words_before() then -- 此处调用时未传参，但函数已兼容
