@@ -1,6 +1,5 @@
-local has_words_before = function(...) -- 允许接收任意参数
+local has_words_before = function()
   -- 使用 function(...) 或显式声明参数数量，避免因隐式传参导致崩溃
-
   local col = vim.api.nvim_win_get_cursor(0)[2]
   if col == 0 then
     return false
