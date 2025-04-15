@@ -9,7 +9,11 @@ map("i", "jj", "<esc>l", { desc = "Escape", noremap = true, silent = true })
 
 -- macos style go to start/end of line
 map("i", "<C-a>", "<C-o>I", { desc = "Go to start of the line", noremap = true, silent = true })
+map("n", "<C-a>", "^", { desc = "Go to start of the line", noremap = true, silent = true })
+map("v", "<C-a>", "^", { desc = "Go to start of the line", noremap = true, silent = true })
 map("i", "<C-e>", "<C-o>A", { desc = "Go to end of the line", noremap = true, silent = true })
+map("n", "<C-e>", "$", { desc = "Go to end of the line", noremap = true, silent = true })
+map("v", "<C-e>", "$", { desc = "Go to end of the line", noremap = true, silent = true })
 
 -- FIXME 在 MacOS 中和任务调度快捷键冲突
 -- Resize window using <ctrl> arrow keys
