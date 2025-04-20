@@ -15,6 +15,10 @@ map("i", "<C-e>", "<C-o>A", { desc = "Go to end of the line", noremap = true, si
 map("n", "<C-e>", "$", { desc = "Go to end of the line", noremap = true, silent = true })
 map("v", "<C-e>", "$", { desc = "Go to end of the line", noremap = true, silent = true })
 
+-- 移动选中行上下（Visual 模式下）
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
 -- FIXME 在 MacOS 中和任务调度快捷键冲突
 -- Resize window using <ctrl> arrow keys
 map("n", "<leader>z<Up>", "<cmd>resize +2<cr>", { desc = "Increase Window Height" })
@@ -26,6 +30,7 @@ map("n", "<leader>z<Right>", "<cmd>vertical resize +2<cr>", { desc = "Increase W
 if vim.g.neovide then
   -- Put anything you want to happen only in Neovide here
   vim.g.neovide_hide_mouse_when_typing = true
+  vim.g.neovide_scale_factor = 1.4
   -- Neovide mappings
   local function adjust_neovide_scale(adjustment)
     vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + adjustment
