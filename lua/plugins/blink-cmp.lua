@@ -95,10 +95,10 @@ return {
     },
 
     completion = {
-      menu = { enabled = false },
+      menu = { enabled = true }, -- 启用候选菜单
       ghost_text = {
         enabled = true,
-        -- Show the ghost text when no item has been selected, defaulting to the first item
+        -- 没有选中项时也显示幽灵文本
         show_without_selection = true,
       },
       list = { selection = { preselect = false } },

@@ -19,7 +19,7 @@ return {
           },
         },
         -- See below for more information
-        repl_open_cmd = require("iron.view").right("%40"),
+        repl_open_cmd = require("iron.view").right("%50"),
       },
       keymaps = {
         toggle_repl = "<space>rr", -- toggles the repl open and closed.
