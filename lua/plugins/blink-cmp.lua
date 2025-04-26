@@ -91,14 +91,14 @@ return {
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
       -- default = { "lsp", "path", "snippets", "buffer" },
-      default = { "buffer", "lsp", "snippets", "path" },
+      default = { "buffer", "lsp", "path" },
     },
 
     completion = {
-      menu = { enabled = true }, -- 启用候选菜单
+      menu = { enabled = false },
       ghost_text = {
         enabled = true,
-        -- 没有选中项时也显示幽灵文本
+        -- Show the ghost text when no item has been selected, defaulting to the first item
         show_without_selection = true,
       },
       list = { selection = { preselect = false } },
